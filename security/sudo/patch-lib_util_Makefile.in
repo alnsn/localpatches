@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- lib/util/Makefile.in.orig	2015-10-31 23:35:24.000000000 +0000
++++ lib/util/Makefile.in
+@@ -60,10 +60,10 @@ CPPDEFS = -D_PATH_SUDO_CONF=\"$(sysconfd
+ CPPFLAGS = -I$(incdir) -I$(top_builddir) -I$(srcdir) -I$(top_srcdir) $(CPPDEFS) @CPPFLAGS@
+ 
+ # Usually -O and/or -g
+-CFLAGS = @CFLAGS@
++CFLAGS = -fPIC @CFLAGS@
+ 
+ # Flags to pass to the link stage
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -fPIC -pie @LDFLAGS@
+ LT_LDFLAGS = @LIBUTIL_LDFLAGS@ @LT_LDFLAGS@ @LT_LDEXPORTS@
+ 
+ # Flags to pass to libtool

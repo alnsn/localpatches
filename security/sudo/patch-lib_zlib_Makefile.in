@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- lib/zlib/Makefile.in.orig	2015-10-31 23:34:59.000000000 +0000
++++ lib/zlib/Makefile.in
+@@ -55,10 +55,10 @@ INSTALL_OWNER = -o $(install_uid) -g $(i
+ CPPFLAGS = -I. -I$(srcdir)
+ 
+ # Usually -O and/or -g
+-CFLAGS = @CFLAGS@
++CFLAGS = -fPIC @CFLAGS@
+ 
+ # Flags to pass to the link stage
+-LDFLAGS =
++LDFLAGS = -fPIC -pie
+ LT_LDFLAGS = @ZLIB_LDFLAGS@ @LT_LDFLAGS@ @LT_LDEXPORTS@
+ 
+ # Flags to pass to libtool

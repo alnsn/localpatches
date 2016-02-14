@@ -1,0 +1,17 @@
+$NetBSD$
+
+--- src/Makefile.in.orig	2016-02-05 23:04:16.534689369 +0000
++++ src/Makefile.in
+@@ -48,10 +48,10 @@ CPPFLAGS = -I$(incdir) -I$(top_builddir)
+ 	   $(CPPDEFS) @CPPFLAGS@
+ 
+ # Usually -O and/or -g
+-CFLAGS = @CFLAGS@
++CFLAGS = -fPIC @CFLAGS@
+ 
+ # Flags to pass to the link stage
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -fPIC -pie @LDFLAGS@
+ SUDO_LDFLAGS = $(LDFLAGS) @SUDO_LDFLAGS@
+ LT_LDFLAGS = @LT_LDFLAGS@
+ 

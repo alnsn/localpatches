@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- pcre/Makefile.in.orig	2006-12-31 20:06:24.000000000 +0000
++++ pcre/Makefile.in
+@@ -33,7 +33,7 @@ INCDIR = @includedir@
+ MANDIR = @mandir@
+ 
+ CC = @CC@
+-CFLAGS = @CFLAGS@
++CFLAGS = -fPIC @CFLAGS@
+ RANLIB = @RANLIB@
+ UTF8   = @UTF8@
+ 

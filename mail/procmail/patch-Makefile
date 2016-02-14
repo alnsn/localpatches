@@ -1,0 +1,14 @@
+$NetBSD$
+
+--- Makefile.orig	2016-02-03 20:55:55.356682406 +0000
++++ Makefile
+@@ -91,6 +91,9 @@ LDFLAGS0= -s
+ # Read my libs :-)
+ LIBS=
+ 
++CFLAGS += -fPIC
++LDFLAGS+= -fPIC -pie
++
+ CFLAGS1 = $(CFLAGS0) #-posix -Xp
+ LDFLAGS1= $(LDFLAGS0) $(LIBS) #-lcposix
+ 

@@ -1,0 +1,16 @@
+$NetBSD$
+
+--- Makefile.config.in.orig	2012-10-28 12:57:15.000000000 +0000
++++ Makefile.config.in
+@@ -170,9 +170,9 @@ CONFIG_XMLTO = @CONFIG_XMLTO@
+ CONFIG_GSSAPI = @CONFIG_GSSAPI@
+ 
+ DEFS = @DEFS@
+-CFLAGS = @CFLAGS@
++CFLAGS = -fPIC -pie @CFLAGS@
+ CPPFLAGS = @CPPFLAGS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -fPIC @LDFLAGS@
+ LIBS = @LIBS@
+ 
+ 

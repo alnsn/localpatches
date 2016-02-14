@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- src/makefile.in.orig	2016-02-04 22:37:50.048058873 +0000
++++ src/makefile.in
+@@ -20,7 +20,7 @@ localedir	= /usr/pkg/share/locale
+ # Symbols which the configure script can set in each makefile:
+ CC		= @CC@
+ CPP		= @CPP@
+-CFLAGS		= @CFLAGS@
++CFLAGS		= -fPIC @CFLAGS@
+ DEFS		= @DEFS@
+ CHARSET_DEFS	= @CHARSET_DEFS@
+ EXTRA_CPPFLAGS	= @EXTRA_CPPFLAGS@
+@@ -43,7 +43,7 @@ YACC		= @YACC@
+ WINDRES		= @WINDRES@
+ 
+ LIBS		= @LIBS@ $(RESOLVLIB) $(WAISLIB) $(SITE_LIBS)
+-LDFLAGS		= @EXTRA_LDFLAGS@ @LDFLAGS@
++LDFLAGS		= -fPIC -pie @EXTRA_LDFLAGS@ @LDFLAGS@
+ 
+ # Symbols inherited from the top-level makefile
+ RESOLVLIB	= # FIXME: set in parent makefile

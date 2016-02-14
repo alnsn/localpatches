@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- GNUmakefile.in.orig	2016-02-03 21:29:57.030843694 +0000
++++ GNUmakefile.in
+@@ -236,7 +236,7 @@ LIBS         = @LIBS@ $(W32_LIB) $(SOCKE
+ # Win32 GUI build.
+ # The flag "-pthread" is required if using Pthreads under Linux (and
+ # possibly other OSs).
+-SPECIAL_CFLAGS = @SPECIAL_CFLAGS@
++SPECIAL_CFLAGS = -fPIC -pie @SPECIAL_CFLAGS@
+ 
+ # Add your flags here
+ OTHER_CFLAGS =

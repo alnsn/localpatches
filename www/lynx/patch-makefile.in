@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- makefile.in.orig	2016-02-04 22:37:49.442324260 +0000
++++ makefile.in
+@@ -14,7 +14,7 @@ builddir	= .
+ VPATH		= $(srcdir)
+ 
+ CC		= @CC@
+-CFLAGS		= @CFLAGS@
++CFLAGS		= -fPIC @CFLAGS@
+ DEFS		= @DEFS@
+ CPPFLAGS	= @CPPFLAGS@
+ LINT		= @LINT@
+@@ -31,7 +31,7 @@ BUILD_LIBS	= @BUILD_LIBS@
+ x		= @EXEEXT@
+ o		= .@OBJEXT@
+ 
+-LDFLAGS		= @EXTRA_LDFLAGS@ @LDFLAGS@
++LDFLAGS		= -fPIC -pie @EXTRA_LDFLAGS@ @LDFLAGS@
+ LIBS		= @LIBS@
+ 
+ INSTALL		= @INSTALL@

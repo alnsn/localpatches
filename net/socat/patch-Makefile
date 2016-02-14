@@ -1,0 +1,22 @@
+$NetBSD$
+
+--- Makefile.in.orig	2015-01-24 16:30:10.000000000 +0000
++++ Makefile.in
+@@ -29,7 +29,7 @@ CPPFLAGS = -I. @CPPFLAGS@
+ #0 INCLS = -I. @V_INCL@
+ DEFS = @DEFS@
+ LIBS = @LIBS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS = -fPIC -pie @LDFLAGS@
+ 
+ INSTALL = @INSTALL@
+ 
+@@ -37,7 +37,7 @@ INSTALL = @INSTALL@
+ 
+ 
+ #0 CFLAGS = @CFLAGS@ $(CCOPTS) $(DEFS) $(INCLS)
+-CFLAGS = @CFLAGS@ $(CCOPTS) $(DEFS) $(CPPFLAGS)
++CFLAGS = -fPIC @CFLAGS@ $(CCOPTS) $(DEFS) $(CPPFLAGS)
+ CLIBS = $(LIBS)
+ #CLIBS = $(LIBS) -lm -lefence
+ XIOSRCS = xioinitialize.c xiohelp.c xioparam.c xiodiag.c xioopen.c xioopts.c \

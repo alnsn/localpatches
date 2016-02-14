@@ -1,0 +1,15 @@
+$NetBSD$
+
+--- Makefile.orig	2015-07-30 19:59:07.000000000 +0000
++++ Makefile
+@@ -24,8 +24,8 @@ MANDIR        = $(PREFIX)/share/man
+ LOCALEDIR     = $(PREFIX)/share/locale
+ BUILDDIR      = $(SRC)
+ DESTDIR       = 
+-CFLAGS        = -Wall -W -O2
+-LDFLAGS       = 
++CFLAGS        = -fPIC -Wall -W -O2
++LDFLAGS       = -fPIC -pie
+ COPTS         = 
+ RPM_OPT_FLAGS = 
+ LIBS          = 

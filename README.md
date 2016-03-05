@@ -10,3 +10,5 @@ Note that some patches don't work (e.g. in security/gnupg) or might stop
 working in future versions of packages.
 
 Alex / alnsn
+
+PS The patch in this post https://mail-index.netbsd.org/tech-pkg/2016/03/01/msg016473.html adds PKGSRC_MKPIE flag.

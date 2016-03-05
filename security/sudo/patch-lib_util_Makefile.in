@@ -7,11 +7,11 @@ $NetBSD$
  
  # Usually -O and/or -g
 -CFLAGS = @CFLAGS@
-+CFLAGS = -fPIC @CFLAGS@
++CFLAGS = -fPIE @CFLAGS@
  
  # Flags to pass to the link stage
 -LDFLAGS = @LDFLAGS@
-+LDFLAGS = -fPIC -pie @LDFLAGS@
++LDFLAGS = -fPIE -pie @LDFLAGS@
  LT_LDFLAGS = @LIBUTIL_LDFLAGS@ @LT_LDFLAGS@ @LT_LDEXPORTS@
  
  # Flags to pass to libtool

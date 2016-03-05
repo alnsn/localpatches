@@ -7,7 +7,7 @@ $NetBSD$
  CC		= @CC@
  CPP		= @CPP@
 -CFLAGS		= @CFLAGS@
-+CFLAGS		= -fPIC @CFLAGS@
++CFLAGS		= -fPIE @CFLAGS@
  DEFS		= @DEFS@
  CHARSET_DEFS	= @CHARSET_DEFS@
  EXTRA_CPPFLAGS	= @EXTRA_CPPFLAGS@
@@ -16,7 +16,7 @@ $NetBSD$
  
  LIBS		= @LIBS@ $(RESOLVLIB) $(WAISLIB) $(SITE_LIBS)
 -LDFLAGS		= @EXTRA_LDFLAGS@ @LDFLAGS@
-+LDFLAGS		= -fPIC -pie @EXTRA_LDFLAGS@ @LDFLAGS@
++LDFLAGS		= -fPIE -pie @EXTRA_LDFLAGS@ @LDFLAGS@
  
  # Symbols inherited from the top-level makefile
  RESOLVLIB	= # FIXME: set in parent makefile

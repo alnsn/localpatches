@@ -6,8 +6,8 @@ $NetBSD$
  RM= rm -f
  LIBS= -lm $(MYLIBS)
  
-+CFLAGS += -fPIC
-+LDFLAGS+= -fPIC -pie
++CFLAGS += -fPIE
++LDFLAGS+= -fPIE -pie
 +
  MYCFLAGS=
  MYLDFLAGS=

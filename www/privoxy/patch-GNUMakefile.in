@@ -7,7 +7,7 @@ $NetBSD$
  # The flag "-pthread" is required if using Pthreads under Linux (and
  # possibly other OSs).
 -SPECIAL_CFLAGS = @SPECIAL_CFLAGS@
-+SPECIAL_CFLAGS = -fPIC -pie @SPECIAL_CFLAGS@
++SPECIAL_CFLAGS = -fPIE -pie @SPECIAL_CFLAGS@
  
  # Add your flags here
  OTHER_CFLAGS =

@@ -8,8 +8,8 @@ $NetBSD$
  DESTDIR       = 
 -CFLAGS        = -Wall -W -O2
 -LDFLAGS       = 
-+CFLAGS        = -fPIC -Wall -W -O2
-+LDFLAGS       = -fPIC -pie
++CFLAGS        = -fPIE -Wall -W -O2
++LDFLAGS       = -fPIE -pie
  COPTS         = 
  RPM_OPT_FLAGS = 
  LIBS          = 

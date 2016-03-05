@@ -7,7 +7,7 @@ $NetBSD$
  DEFS = @DEFS@
  LIBS = @LIBS@
 -LDFLAGS = @LDFLAGS@
-+LDFLAGS = -fPIC -pie @LDFLAGS@
++LDFLAGS = -fPIE -pie @LDFLAGS@
  
  INSTALL = @INSTALL@
  
@@ -16,7 +16,7 @@ $NetBSD$
  
  #0 CFLAGS = @CFLAGS@ $(CCOPTS) $(DEFS) $(INCLS)
 -CFLAGS = @CFLAGS@ $(CCOPTS) $(DEFS) $(CPPFLAGS)
-+CFLAGS = -fPIC @CFLAGS@ $(CCOPTS) $(DEFS) $(CPPFLAGS)
++CFLAGS = -fPIE @CFLAGS@ $(CCOPTS) $(DEFS) $(CPPFLAGS)
  CLIBS = $(LIBS)
  #CLIBS = $(LIBS) -lm -lefence
  XIOSRCS = xioinitialize.c xiohelp.c xioparam.c xiodiag.c xioopen.c xioopts.c \

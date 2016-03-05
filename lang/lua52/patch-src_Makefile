@@ -6,8 +6,8 @@ $NetBSD$
  LDFLAGS+= $(SYSLDFLAGS) $(MYLDFLAGS)
  LIBS= -lm $(SYSLIBS) $(MYLIBS)
  
-+CFLAGS += -fPIC
-+LDFLAGS+= -fPIC -pie
++CFLAGS += -fPIE
++LDFLAGS+= -fPIE -pie
 +
  AR= ar rcu
  RANLIB= ranlib

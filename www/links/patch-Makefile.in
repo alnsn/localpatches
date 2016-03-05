@@ -7,7 +7,7 @@ $NetBSD$
  DEFS = @DEFS@ -I. -I$(srcdir) -I.
  CPPFLAGS = @CPPFLAGS@
 -LDFLAGS = @LDFLAGS@
-+LDFLAGS = -fPIC -pie @LDFLAGS@
++LDFLAGS = -fPIE -pie @LDFLAGS@
  links_OBJECTS =  af_unix.o auth.o beos.o bfu.o block.o bookmark.o \
  cache.o charsets.o compress.o connect.o cookies.o data.o default.o \
  dip.o directfb.o dither.o dns.o dos.o drivers.o error.o file.o finger.o \
@@ -16,7 +16,7 @@ $NetBSD$
  @ATHEOS_GR_TRUE@links_DEPENDENCIES =  atheos.o
  links_LDFLAGS = 
 -CFLAGS = @CFLAGS@
-+CFLAGS = -fPIC @CFLAGS@
++CFLAGS = -fPIE @CFLAGS@
  COMPILE = $(CC) $(DEFS) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
  CCLD = $(CC)
  LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(LDFLAGS) -o $@

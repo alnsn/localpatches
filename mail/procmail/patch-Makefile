@@ -6,8 +6,8 @@ $NetBSD$
  # Read my libs :-)
  LIBS=
  
-+CFLAGS += -fPIC
-+LDFLAGS+= -fPIC -pie
++CFLAGS += -fPIE
++LDFLAGS+= -fPIE -pie
 +
  CFLAGS1 = $(CFLAGS0) #-posix -Xp
  LDFLAGS1= $(LDFLAGS0) $(LIBS) #-lcposix

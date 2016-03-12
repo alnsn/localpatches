@@ -1,0 +1,16 @@
+$NetBSD$
+
+Fix compilation with PKGSRC_MKPIE=yes.
+XXX Investigate whether it's a problem with pkgsrc wrappers.
+
+--- doc/Makefile.in.orig	2016-03-12 19:53:43.426231094 +0000
++++ doc/Makefile.in
+@@ -1075,7 +1075,7 @@ uninstall-man: uninstall-man1 uninstall-
+ 
+ 
+ yat2m: yat2m.c
+-	$(CC_FOR_BUILD) -o $@ $(srcdir)/yat2m.c
++	$(CC_FOR_BUILD) $(CFLAGS) $(LDFLAGS) -o $@ $(srcdir)/yat2m.c
+ 
+ .fig.png:
+ 	fig2dev -L png `test -f '$<' || echo '$(srcdir)/'`$< $@

@@ -8,4 +8,4 @@ They work best with the following lines in your mk.conf file:
 PKGSRC_MKPIE=yes
 PKGSRC_USE_RELRO=yes
 
-Alex / alnsn.
+Alex / alnsn

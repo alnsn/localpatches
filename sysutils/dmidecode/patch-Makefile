@@ -1,0 +1,16 @@
+$NetBSD$
+
+Fix compilation with PKGSRC_MKPIE=yes.
+
+--- Makefile.orig	2016-04-10 10:27:33.292240282 +0000
++++ Makefile
+@@ -23,7 +23,8 @@ CFLAGS += -O2
+ #CFLAGS += -g
+ 
+ # Pass linker flags here
+-LDFLAGS =
++LDFLAGS = -fPIE -pie
++CFLAGS+=  -fPIE
+ 
+ DESTDIR =
+ prefix  = ${PREFIX}

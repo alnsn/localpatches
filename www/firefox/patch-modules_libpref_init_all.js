@@ -1,8 +1,16 @@
 Set sock proxy to 127.0.0.1:9050. Do not save passwords.
 
---- ./modules/libpref/init/all.js.pkgsrc	2017-01-04 19:42:37.751875843 +0000
-+++ ./modules/libpref/init/all.js	2017-01-04 19:40:54.558230859 +0000
-@@ -1936,10 +1936,10 @@
+--- ./modules/libpref/init/all.js.orig	2017-01-04 22:13:47.772391376 +0000
++++ ./modules/libpref/init/all.js	2017-01-04 22:43:12.404007233 +0000
+@@ -1929,17 +1929,17 @@
+ 
+ pref("permissions.default.image",           1); // 1-Accept, 2-Deny, 3-dontAcceptForeign
+ 
+-pref("network.proxy.type",                  5);
++pref("network.proxy.type",                  1);
+ pref("network.proxy.ftp",                   "");
+ pref("network.proxy.ftp_port",              0);
+ pref("network.proxy.http",                  "");
  pref("network.proxy.http_port",             0);
  pref("network.proxy.ssl",                   "");
  pref("network.proxy.ssl_port",              0);

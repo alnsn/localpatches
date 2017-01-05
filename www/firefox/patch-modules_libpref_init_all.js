@@ -40,3 +40,12 @@ Set sock proxy to 127.0.0.1:9050. Do not save passwords.
  pref("signon.autologin.proxy",              false);
  pref("signon.storeWhenAutocompleteOff",     true);
  pref("signon.ui.experimental",              false);
+@@ -5310,7 +5310,7 @@
+ pref("browser.search.update", true);
+ pref("browser.search.update.log", false);
+ pref("browser.search.update.interval", 21600);
+-pref("browser.search.suggest.enabled", true);
++pref("browser.search.suggest.enabled", false);
+ pref("browser.search.reset.enabled", false);
+ pref("browser.search.reset.whitelist", "");
+ pref("browser.search.geoSpecificDefaults", false);

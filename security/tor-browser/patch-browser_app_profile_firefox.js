@@ -55,3 +55,12 @@ Disable auto updates. Open about:blank on startup.
  
  pref("browser.slowStartup.notificationDisabled", false);
  pref("browser.slowStartup.timeThreshold", 40000);
+@@ -1239,7 +1239,7 @@
+ pref("services.sync.prefs.sync.browser.offline-apps.notify", true);
+ pref("services.sync.prefs.sync.browser.safebrowsing.enabled", true);
+ pref("services.sync.prefs.sync.browser.safebrowsing.malware.enabled", true);
+-pref("services.sync.prefs.sync.browser.search.update", true);
++pref("services.sync.prefs.sync.browser.search.update", false);
+ pref("services.sync.prefs.sync.browser.sessionstore.restore_on_demand", true);
+ pref("services.sync.prefs.sync.browser.startup.homepage", true);
+ pref("services.sync.prefs.sync.browser.startup.page", true);

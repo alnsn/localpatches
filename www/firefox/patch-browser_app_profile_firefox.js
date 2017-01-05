@@ -1,4 +1,4 @@
-Disable auto updates. Open about:blank on startup.
+Disable auto updates.Open about:blank on startup. Switch to DuckDuckGo (TOR).
 
 --- ./browser/app/profile/firefox.js.orig	2017-01-04 20:25:55.031642372 +0000
 +++ ./browser/app/profile/firefox.js	2017-01-04 20:31:41.067717307 +0000
@@ -44,6 +44,15 @@ Disable auto updates. Open about:blank on startup.
  pref("lightweightThemes.getMoreURL", "https://addons.mozilla.org/%LOCALE%/firefox/themes");
  pref("lightweightThemes.recommendedThemes", "[{\"id\":\"recommended-1\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/a-web-browser-renaissance/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.header.jpg\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.footer.jpg\",\"textcolor\":\"#000000\",\"accentcolor\":\"#f2d9b1\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.icon.jpg\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/1.preview.jpg\",\"author\":\"Sean.Martell\",\"version\":\"0\"},{\"id\":\"recommended-2\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/space-fantasy/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.header.jpg\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.footer.jpg\",\"textcolor\":\"#ffffff\",\"accentcolor\":\"#d9d9d9\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.icon.jpg\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/2.preview.jpg\",\"author\":\"fx5800p\",\"version\":\"1.0\"},{\"id\":\"recommended-3\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/linen-light/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.header.png\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.footer.png\",\"accentcolor\":\"#ada8a8\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.icon.png\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/3.preview.png\",\"author\":\"DVemer\",\"version\":\"1.0\"},{\"id\":\"recommended-4\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/pastel-gradient/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.header.png\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.footer.png\",\"textcolor\":\"#000000\",\"accentcolor\":\"#000000\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.icon.png\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/4.preview.png\",\"author\":\"darrinhenein\",\"version\":\"1.0\"},{\"id\":\"recommended-5\",\"homepageURL\":\"https://addons.mozilla.org/firefox/addon/carbon-light/\",\"headerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.header.png\",\"footerURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.footer.png\",\"textcolor\":\"#3b3b3b\",\"accentcolor\":\"#2e2e2e\",\"iconURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.icon.jpg\",\"previewURL\":\"resource:///chrome/browser/content/browser/defaultthemes/5.preview.jpg\",\"author\":\"Jaxivo\",\"version\":\"1.0\"}]");
  
+@@ -211,7 +211,7 @@
+ #endif
+ 
+ // At startup, check if we're the default browser and prompt user if not.
+-pref("browser.shell.checkDefaultBrowser", true);
++pref("browser.shell.checkDefaultBrowser", false);
+ pref("browser.shell.shortcutFavicons",true);
+ pref("browser.shell.mostRecentDateSetAsDefault", "");
+ pref("browser.shell.skipDefaultBrowserCheck", true);
 @@ -219,8 +219,8 @@
  
  // 0 = blank, 1 = home (browser.startup.homepage), 2 = last visited page, 3 = resume previous browser session
@@ -55,6 +64,15 @@ Disable auto updates. Open about:blank on startup.
  
  pref("browser.slowStartup.notificationDisabled", false);
  pref("browser.slowStartup.timeThreshold", 40000);
+@@ -339,7 +339,7 @@
+ pref("browser.search.searchEnginesURL",      "https://addons.mozilla.org/%LOCALE%/firefox/search-engines/");
+ 
+ // pointer to the default engine name
+-pref("browser.search.defaultenginename",      "chrome://browser-region/locale/region.properties");
++pref("browser.search.defaultenginename",      "DuckDuckGo (TOR)");
+ 
+ // Ordering of Search Engines in the Engine list.
+ pref("browser.search.order.1",                "chrome://browser-region/locale/region.properties");
 @@ -1042,7 +1042,7 @@
  pref("services.sync.prefs.sync.browser.offline-apps.notify", true);
  pref("services.sync.prefs.sync.browser.safebrowsing.phishing.enabled", true);

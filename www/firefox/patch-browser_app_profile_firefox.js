@@ -1,7 +1,8 @@
-Disable auto updates.Open about:blank on startup. Switch to DuckDuckGo (TOR).
+Disable auto updates. Open about:blank on startup. Switch to DuckDuckGo (TOR).
+Do not send a network request when a new tab is opened.
 
---- ./browser/app/profile/firefox.js.orig	2017-01-04 20:25:55.031642372 +0000
-+++ ./browser/app/profile/firefox.js	2017-01-04 20:31:41.067717307 +0000
+--- ./browser/app/profile/firefox.js.orig	2016-10-31 20:15:24.000000000 +0000
++++ ./browser/app/profile/firefox.js	2017-01-09 23:34:06.598306214 +0000
 @@ -50,7 +50,7 @@
  pref("extensions.getAddons.recommended.url", "https://services.addons.mozilla.org/%LOCALE%/%APP%/api/%API_VERSION%/list/recommended/all/%MAX_RESULTS%/%OS%/%VERSION%?src=firefox");
  pref("extensions.getAddons.link.url", "https://addons.mozilla.org/%LOCALE%/firefox/");
@@ -73,12 +74,12 @@ Disable auto updates.Open about:blank on startup. Switch to DuckDuckGo (TOR).
  
  // Ordering of Search Engines in the Engine list.
  pref("browser.search.order.1",                "chrome://browser-region/locale/region.properties");
-@@ -1042,7 +1042,7 @@
- pref("services.sync.prefs.sync.browser.offline-apps.notify", true);
- pref("services.sync.prefs.sync.browser.safebrowsing.phishing.enabled", true);
- pref("services.sync.prefs.sync.browser.safebrowsing.malware.enabled", true);
--pref("services.sync.prefs.sync.browser.search.update", true);
-+pref("services.sync.prefs.sync.browser.search.update", false);
- pref("services.sync.prefs.sync.browser.sessionstore.restore_on_demand", true);
- pref("services.sync.prefs.sync.browser.startup.homepage", true);
- pref("services.sync.prefs.sync.browser.startup.page", true);
+@@ -1133,7 +1133,7 @@
+ pref("browser.newtabpage.introShown", false);
+ 
+ // Toggles the content of 'about:newtab'. Shows the grid when enabled.
+-pref("browser.newtabpage.enabled", true);
++pref("browser.newtabpage.enabled", false);
+ 
+ // Toggles the enhanced content of 'about:newtab'. Shows sponsored tiles.
+ sticky_pref("browser.newtabpage.enhanced", true);

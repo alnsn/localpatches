@@ -1,7 +1,8 @@
 Set sock proxy to 127.0.0.1:9050. Do not save passwords.
+Do not download safebrowsing data.
 
---- ./modules/libpref/init/all.js.orig	2017-01-04 22:13:47.772391376 +0000
-+++ ./modules/libpref/init/all.js	2017-01-04 22:43:12.404007233 +0000
+--- ./modules/libpref/init/all.js.pkgsrc	2017-01-09 21:50:24.416481641 +0000
++++ ./modules/libpref/init/all.js	2017-01-09 21:51:04.947446170 +0000
 @@ -1929,17 +1929,17 @@
  
  pref("permissions.default.image",           1); // 1-Accept, 2-Deny, 3-dontAcceptForeign
@@ -40,8 +41,21 @@ Set sock proxy to 127.0.0.1:9050. Do not save passwords.
  pref("signon.autologin.proxy",              false);
  pref("signon.storeWhenAutocompleteOff",     true);
  pref("signon.ui.experimental",              false);
-@@ -5310,7 +5310,7 @@
- pref("browser.search.update", true);
+@@ -5118,7 +5118,7 @@
+ // Enable malware protection
+ pref("browser.safebrowsing.malware.enabled", true);
+ 
+-pref("browser.safebrowsing.downloads.enabled", true);
++pref("browser.safebrowsing.downloads.enabled", false);
+ pref("browser.safebrowsing.downloads.remote.enabled", true);
+ pref("browser.safebrowsing.downloads.remote.timeout_ms", 10000);
+ pref("browser.safebrowsing.downloads.remote.url", "https://sb-ssl.google.com/safebrowsing/clientreport/download?key=%GOOGLE_API_KEY%");
+@@ -5307,10 +5307,10 @@
+ 
+ // Search service settings
+ pref("browser.search.log", false);
+-pref("browser.search.update", true);
++pref("browser.search.update", false);
  pref("browser.search.update.log", false);
  pref("browser.search.update.interval", 21600);
 -pref("browser.search.suggest.enabled", true);
